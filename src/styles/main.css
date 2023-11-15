@@ -1,0 +1,26 @@
+body {
+  font-family: "Inter Tight Variable", sans-serif;
+  background-color: #efefef;
+}
+
+.sticky-hero {
+  margin: auto;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 16px;
+  height: min-content;
+  justify-content: flex-start;
+  max-width: 1200px;
+  overflow: visible;
+  padding: 80px 0 0;
+  position: sticky;
+  top: -48px;
+  transform: perspective(1200px);
+  width: 100%;
+  will-change: transform;
+  z-index: 1;
+}

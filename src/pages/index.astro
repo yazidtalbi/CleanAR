@@ -1,0 +1,92 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Slider from "../components/Slider.astro";
+import Intro from "../components/Intro.astro";
+import Services from "../components/Services.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Avantages from "../components/Avantages.astro";
+import FAQ from "../components/FAQ.astro";
+import CTA from "../components/CTA.astro";
+
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <!-- Alpine Plugins -->
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <section class=''>
+      <div
+        class=' px-4 mx-auto max-w-screen-xl text-center  '
+      >
+        <div class='sticky-hero' id='hero'>
+          <h1
+            class='mb-4 text-8xl font-semibold tracking-tight leading-none text-gray-900 capitalize max-w-4xl'
+          >
+            Libérez votre potentiel numérique
+          </h1>
+		  <p class="font-normal w-1/2 text-center self-center text-xl leading-relaxed">Établissez la présence digitale ultime grâce à notre expertise en Design, Développement et Marketing</p>
+		  <!-- <div class="flex justify-between  w-2/5 leading-tight"><p class="font-semibold w-1/2 text-left self-center">AGENCE DE MARKETING DIGITAL </p> <p class="font-semibold w-1/2 text-right uppercase"> design<br/>développement<br/>marketing</p></div>
+     -->
+          <div
+            class='flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4'
+          >
+            <a
+              href='#'
+              class='inline-flex justify-center items-center my-5 py-2.5 px-5 text-lg font-semibold text-center text-white rounded-xl bg-gray-900   '
+            >
+              
+Réservez une Consultation Gratuite
+              <svg
+                class='ml-2 -mr-1 w-5 h-5'
+                fill='currentColor'
+                viewBox='0 0 20 20'
+                xmlns='http://www.w3.org/2000/svg'
+                ><path
+                  fill-rule='evenodd'
+                  d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+                  clip-rule='evenodd'></path></svg
+              >
+            </a>
+          </div>
+        </div>
+        <div class='relative max-w-md z-10 mx-auto' id='image'>
+          <img
+            class='h-auto rounded-3xl contain'
+            src='https://framerusercontent.com/images/cKlwxnwwJkxPfFnzsaHiqMqEdq4.png'
+            alt='image description'
+          />
+		  <!-- <Slider/> -->
+        </div>
+      </div>
+    </section> 
+	<Intro/>
+	<Services/>
+	<Testimonials/>
+	<Avantages/>
+	<FAQ/>
+	<CTA/>
+    <Footer />
+    <script
+      is:inline
+      src='https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js'
+    ></script>
+    <script
+      src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+    ></script>
+
+    <script>
+   $(document).ready(function () {
+    $(window).scroll(function () {
+      $(".sticky-hero").css("opacity", 1 - $(this).scrollTop() / 700);
+    });
+  });
+    </script>
+  </body>
+</html>
