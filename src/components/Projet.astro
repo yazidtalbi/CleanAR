@@ -1,0 +1,171 @@
+---
+import { Marquee } from "dynamic-marquee";
+---
+
+<!-- <div class='max-w-screen-3npm install --save dynamic-marqueexl mx-auto mt-32'>
+  <div class='grid grid-cols-2 md:grid-cols-2 gap-20 h-5/6 w-4/5 mx-auto'>
+    <div class='col-span-1 p-5 h-full'>
+      <div class=''>
+        <img
+          src='https://cdn.sanity.io/images/r115idoc/production/d44de656a2d62bcb75c5ee69f1d20051cfb82ee3-1408x1760.png?q=90&auto=format'
+        />
+
+        <h1 class='title-font text-4xl font-semibold text-gray-900 mb-6 mt-10'>
+          Wealth
+        </h1>
+
+        <p class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-0'>
+          Designing a self-service digital estate planning platform
+        </p>
+      </div>
+    </div>
+    <div class='mt-32'>
+      <div class='col-span-1 p-5 h-full'>
+        <img
+          src='https://cdn.sanity.io/images/r115idoc/production/6b0bfe7f2627749c3df0f5be12b95e92c720a03c-1408x1760.png?q=90&auto=format'
+        />
+
+        <h1 class='title-font text-4xl font-semibold text-gray-900 mb-6 mt-10'>
+          JOKR
+        </h1>
+
+        <p class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-0'>
+          Mobile app design for a fast grocery delivery startup
+        </p>
+      </div>
+    </div>
+    <div class='col-span-2'>
+      <div class=''>
+        <div class='col-span-1 p-5 h-full'>
+          <img
+            src='https://cdn.sanity.io/images/r115idoc/production/c060734f81de10391dcbb5f0514277791cb0c6c0-2704x1520.png?q=90&auto=format'
+          />
+
+          <h1
+            class='title-font text-4xl font-semibold text-gray-900 mb-6 mt-10'
+          >
+            JOKR
+          </h1>
+
+          <p
+            class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-0'
+          >
+            Mobile app design for a fast grocery delivery startup
+          </p>
+        </div>
+      </div>
+    </div>
+     <div class='bg-violet-400'>
+      <span>04</span>
+    </div>
+    <div class='bg-fuchsia-400'>
+      <span>05</span>
+    </div>
+    <div class='bg-blue-400 col-span-2'>
+      <span>06</span>
+    </div> -->
+<style>
+  .marquee {
+    /*   overflow: hidden; */
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: scrolling 50s linear infinite;
+  }
+
+  .marquee-item {
+    margin: 0 10px;
+    width: 100%;
+    height: 100%;
+    /*   flex: 0 0 20vw; */
+    /*   margin: 0 2vw; */
+  }
+
+  .marquee-item img {
+    display: block;
+    height: 600px;
+    min-width: 100%;
+    border-radius: inherit;
+    object-position: center;
+    object-fit: cover;
+    image-rendering: auto;
+
+    /*   padding: 0 20px; */
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translatex(-144vw);
+    }
+  }
+</style>
+
+<hr class='h-px bg-gray-300 border-0 mx-20' />
+<section class='pb-24'>
+  <div class='flex justify-between max-w-screen-xl mx-auto py-16'>
+    <div class='w-1/3'>
+      <p class='font-normal text-gray-500 text-xl leading-relaxed py-0 w-2/3'>
+        Designing a self-service digital estate planning platform
+      </p>
+    </div>
+    <div class='w-1/3 self-center'>
+      <h1
+        class='title-font text-4xl font-semibold text-gray-900 mb-3 text-center'
+      >
+        Zemium
+      </h1>
+    </div>
+    <div class='flex space-x-3 h-full self-center w-1/3 justify-end'>
+      <div
+        class='bg-gray-300/50 text-gray-800 text-xl font-medium px-4 py-1.5 rounded-full'
+      >
+        Web Design
+      </div>
+      <div
+        class='bg-gray-300/50 text-gray-800 text-xl font-medium px-4 py-1.5 rounded-full'
+      >
+        UX/UI
+      </div>
+    </div>
+  </div>
+  <div class='marquee w-screen overflow-hidden -mx-6'>
+    <div class='marquee-content'>
+      <div class='flex space-x-5'>
+        <div class='flex-none'>
+          <img
+            src='https://framerusercontent.com/images/K3IATGhDN76WgTX9VMrqEoLOpcQ.jpg'
+            class='object-cover h-[70vh] rounded-xl'
+          />
+        </div>
+        <div class='flex-none'>
+          <img
+            src='https://framerusercontent.com/images/vZ2oaxvT0cvRNOhfEgE2UqDIO8.jpg'
+            class='object-cover h-[70vh] rounded-xl'
+          />
+        </div>
+        <div class='flex-none'>
+          <img
+            src='https://framerusercontent.com/images/CcpBpqf4XBK7LeHaAKg7ATucrAs.jpg'
+            class='object-cover h-[70vh] rounded-xl'
+          />
+        </div>
+        <div class='flex-none'>
+          <img
+            src='https://framerusercontent.com/images/yqIDVw7LQ4PBiTl3q2SAiG0wICo.jpg'
+            class='object-cover h-[70vh] rounded-xl'
+          />
+        </div>
+        <div class='flex-none'>
+          <img
+            src='https://framerusercontent.com/images/CcpBpqf4XBK7LeHaAKg7ATucrAs.jpg'
+            class='object-cover h-[70vh] rounded-xl'
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

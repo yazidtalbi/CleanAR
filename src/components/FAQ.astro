@@ -18,73 +18,67 @@ import { Icon } from "astro-icon";
       Questions Fréquemment Posées
     </h1>
   </div>
-  <p
+  <!-- <p
     class='font-normal w-1/2 text-center self-center text-md leading-relaxed mx-auto mt-5'
   >
     Certaines questions ont été posées fréquemment par différents clients.
-  </p>
+  </p> -->
 </div>
 
-<div class='flex flex-wrap -my-8 max-w-5xl mx-auto'>
-  <div class='py-8 px-4 lg:w-1/3'>
-    <div class='h-full flex items-start'>
+<div class='flex flex-wrap container mx-auto max-w-screen-xl'>
+  <div class='lg:w-1/3'>
+    <div class='max-h-full flex items-start'>
       <div class='flex-grow'>
-        <div class='max-w-sm p-8 border border-gray-200 rounded-lg bg-white'>
+        <div
+          class='max-w-sm p-10 border border-gray-200 animate-fade-in rounded-3xl bg-white shadow-md shadow-gray-900/5'
+        >
           <img
             class='w-20 h-20 rounded-full shadow-lg mr-5'
             src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
             alt='Bonnie image'
           />
 
-          <p class='py-6 font-semibold text-lg text-gray-700 mt-5 min-h-32'>
+          <p
+            class='py-4 font-semibold text-xl text-gray-700 mt-5 min-h-32 leading-8'
+          >
             Voici Julia, Head Manager chez Arlibera. N'hésitez pas à lui envoyer
             un message pour obtenir plus de réponses.
           </p>
 
           <a
             href='#'
-            class='inline-flex justify-center items-center my-5 py-3 px-5 text-lg font-semibold text-center text-white rounded-full bg-gray-900'
+            class='inline-flex justify-center items-center my-5 py-3 px-5 text-xl font-semibold text-center text-white rounded-full bg-gray-900 w-full'
           >
             Poser une Question
-            <img src='public/whatsapp.svg' class='h-6 w-6 ml-3' />
+            <img src='public/whatsapp.svg' class='h-6 w-6 ml-5' />
           </a>
         </div>
       </div>
     </div>
   </div>
-  <div class='py-8 px-4 lg:w-2/3'>
+  <div class='px-4 lg:w-2/3'>
     <div class='h-full flex items-start'>
-      <div class='flex-grow pl-6'>
+      <div class='flex-grow'>
         <div id='accordionFlushExample'>
           <div
             class='rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800'
           >
             <h2 class='mb-0' id='flush-headingOne'>
               <button
-                class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
+                class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
                 type='button'
                 data-te-collapse-init
                 data-te-target='#flush-collapseOne'
                 aria-expanded='false'
                 aria-controls='flush-collapseOne'
               >
-                Accordion Item #1
+                <h1 class='title-font text-2xl font-medium text-black'>
+                  Quels avantages notre agence de marketing digital offre?
+                </h1>
                 <span
-                  class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                  class='-mr-1 ml-auto h-8 w-8 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
                 >
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    stroke-width='1.5'
-                    stroke='currentColor'
-                    class='h-6 w-6'
-                  >
-                    <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
-                  </svg>
+                  <Icon name='mdi:chevron-down' />
                 </span>
               </button>
             </h2>
@@ -96,12 +90,16 @@ import { Icon } from "astro-icon";
               aria-labelledby='flush-headingOne'
               data-te-parent='#accordionFlushExample'
             >
-              <div class='px-5 py-4'>
-                Placeholder content for this accordion, which is intended to
-                demonstrate the
-                <code>.accordion-flush</code> class. This is the first item's
-                accordion body.
-              </div>
+              <p
+                class='mb-5 font-normal text-gray-500 text-xl leading-relaxed px-5 py-4'
+              >
+                Notre agence de marketing digital se distingue par une approche
+                stratégique sur mesure, des campagnes ciblées et des analyses
+                approfondies. Avec une équipe dédiée de professionnels
+                chevronnés, nous visons à maximiser votre visibilité en ligne, à
+                générer des leads de qualité et à optimiser votre retour sur
+                investissement.
+              </p>
             </div>
           </div>
           <div
@@ -109,7 +107,7 @@ import { Icon } from "astro-icon";
           >
             <h2 class='mb-0' id='flush-headingTwo'>
               <button
-                class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
+                class='group relative flex w-full items-center rounded-none border-0 border-b-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
                 type='button'
                 data-te-collapse-init
                 data-te-collapse-collapsed
@@ -119,7 +117,7 @@ import { Icon } from "astro-icon";
               >
                 Accordion Item #2
                 <span
-                  class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                  class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#000] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
                 >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -158,7 +156,7 @@ import { Icon } from "astro-icon";
           >
             <h2 class='mb-0' id='flush-headingThree'>
               <button
-                class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
+                class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[] dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
                 type='button'
                 data-te-collapse-init
                 data-te-collapse-collapsed
@@ -209,3 +207,10 @@ import { Icon } from "astro-icon";
     </div>
   </div>
 </div>
+
+<script>
+  // Initialization for ES Users
+  import { Collapse, initTE } from "tw-elements";
+
+  initTE({ Collapse });
+</script>
