@@ -1,17 +1,20 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import HeaderFlow from "../components/HeaderFlow.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Slider from "../components/Slider.astro";
 import Intro from "../components/Intro.astro";
 import Services from "../components/Services.astro";
-import Projet from "../components/Projet.astro";
+import Projet from "../components/Projet.jsx";
 import Testimonials from "../components/Testimonials.astro";
 import Avantages from "../components/Avantages.astro";
 import FAQ from "../components/FAQ.astro";
 import CTA from "../components/CTA.astro";
 import Reviews from "../components/Reviews";
+import Icon from "astro-icon";
+import Projects from "../components/Projects.astro";
 ---
 
 <!doctype html>
@@ -21,7 +24,7 @@ import Reviews from "../components/Reviews";
     <!-- Alpine Plugins -->
   </head>
   <body class=''>
-    <Header title={SITE_TITLE} />
+    <HeaderFlow title={SITE_TITLE} />
     <section class=''>
       <div class='px-4 mx-auto max-w-screen-2xl text-center'>
         <div class='sticky-hero' id='hero'>
@@ -60,171 +63,37 @@ import Reviews from "../components/Reviews";
             </a>
           </div>
         </div>
-        <div
-          class='relative z-10 mx-auto space-x-5 flex max-w-screen-xl'
-          id='image'
-        >
-          <div class='py-8 px-4 w-1/3 text-left'>
-            <div class='h-full flex items-center'>
-              <div class=''>
-                <div id='
-                accordionFlushExample'>
-                  <div
-                    class='rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800'
-                  >
-                    <h2 class='mb-0' id='flush-headingOne'>
-                      <button
-                        class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
-                        type='button'
-                        data-te-collapse-init
-                        data-te-target='#flush-collapseOne'
-                        aria-expanded='false'
-                        aria-controls='flush-collapseOne'
-                      >
-                        <h1
-                          class='title-font text-4xl font-semibold text-gray-900 mb-6'
-                        >
-                          Design
-                        </h1>
-                        <span
-                          class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                            stroke-width='1.5'
-                            stroke='currentColor'
-                            class='h-6 w-6'
-                          >
-                            <path
-                              stroke-linecap='round'
-                              stroke-linejoin='round'
-                              d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
-                          </svg>
-                        </span>
-                      </button>
-                    </h2>
-                    <div
-                      id='flush-collapseOne'
-                      class='!visible border-0'
-                      data-te-collapse-item
-                      data-te-collapse-show
-                      aria-labelledby='flush-headingOne'
-                      data-te-parent='#accordionFlushExample'
-                    >
-                      <p
-                        class='mb-5 font-normal text-gray-500 text-xl leading-relaxed px-5 py-4'
-                      >
-                        Nous créons des identités visuelles mémorables, et nous
-                        établissons des directives de marque claires pour
-                        renforcer votre reconnaissance numérique.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class='rounded-none border border-l-0 border-r-0 border-t-0 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800'
-                  >
-                    <h2 class='mb-0' id='flush-headingTwo'>
-                      <button
-                        class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
-                        type='button'
-                        data-te-collapse-init
-                        data-te-collapse-collapsed
-                        data-te-target='#flush-collapseTwo'
-                        aria-expanded='false'
-                        aria-controls='flush-collapseTwo'
-                      >
-                        Accordion Item #2
-                        <span
-                          class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                            stroke-width='1.5'
-                            stroke='currentColor'
-                            class='h-6 w-6'
-                          >
-                            <path
-                              stroke-linecap='round'
-                              stroke-linejoin='round'
-                              d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
-                          </svg>
-                        </span>
-                      </button>
-                    </h2>
-                    <div
-                      id='flush-collapseTwo'
-                      class='!visible hidden border-0'
-                      data-te-collapse-item
-                      aria-labelledby='flush-headingTwo'
-                      data-te-parent='#accordionFlushExample'
-                    >
-                      <div class='px-5 py-4'>
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the second
-                        item's accordion body. Let's imagine this being filled
-                        with some actual content.
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class='rounded-none border border-b-0 border-l-0 border-r-0 border-t-0 border-neutral-200 dark:border-neutral-600 dark:bg-neutral-800'
-                  >
-                    <h2 class='mb-0' id='flush-headingThree'>
-                      <button
-                        class='group relative flex w-full items-center rounded-none border-0 px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-primary [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-primary-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
-                        type='button'
-                        data-te-collapse-init
-                        data-te-collapse-collapsed
-                        data-te-target='#flush-collapseThree'
-                        aria-expanded='false'
-                        aria-controls='flush-collapseThree'
-                      >
-                        Accordion Item #3
-                        <span
-                          class='-mr-1 ml-auto h-5 w-5 shrink-0 rotate-[-180deg] fill-[#336dec] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
-                        >
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            fill='none'
-                            viewBox='0 0 24 24'
-                            stroke-width='1.5'
-                            stroke='currentColor'
-                            class='h-6 w-6'
-                          >
-                            <path
-                              stroke-linecap='round'
-                              stroke-linejoin='round'
-                              d='M19.5 8.25l-7.5 7.5-7.5-7.5'></path>
-                          </svg>
-                        </span>
-                      </button>
-                    </h2>
-                    <div
-                      id='flush-collapseThree'
-                      class='!visible hidden'
-                      data-te-collapse-item
-                      aria-labelledby='flush-headingThree'
-                      data-te-parent='#accordionFlushExample'
-                    >
-                      <div class='px-5 py-4'>
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the
-                        <code>.accordion-flush</code> class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class='relative z-10 mx-20 space-x-5 flex' id='image'>
+          <div class='py-8 px-4 w-1/3 text-left self-center space-y-12 pr-10'>
+            <h1
+              class='text-black text-2xl font-semibold leading-relaxed text-right'
+            >
+              Nous sommes une agence de Marketing Digital spécialisée dans la
+              conception des identitées de marque et la création des sites Web.
+            </h1>
+
+            <div id='partenaires' class='float-right'>
+              <div class='flex -space-x-4 rtl:space-x-reverse mb-4 justify-end'>
+                <img
+                  class='w-14 h-14 border-4 border-white rounded-full dark:border-gray-800'
+                  src='https://flowbite.com/docs/images/people/profile-picture-5.jpg'
+                  alt=''
+                />
+                <img
+                  class='w-14 h-14 border-4 border-white rounded-full dark:border-gray-800'
+                  src='https://flowbite.com/docs/images/people/profile-picture-2.jpg'
+                  alt=''
+                />
+                <img
+                  class='w-14 h-14 border-4 border-white rounded-full dark:border-gray-800'
+                  src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
+                  alt=''
+                />
               </div>
+
+              <p class='text-black text-xl font-semibold text-right'>
+                +26 partenaires <br />nous ont fait confiance
+              </p>
             </div>
           </div>
 
@@ -236,7 +105,7 @@ import Reviews from "../components/Reviews";
             />
           </div>
 
-          <div class='px-4 w-1/3 text-left self-center'>
+          <div class='px-4 w-1/3 text-left self-center pl-10'>
             <div class=''>
               <!-- <div class='flex opacity-40 space-x-8 mb-10'>
                 <img
@@ -255,40 +124,131 @@ import Reviews from "../components/Reviews";
               </div>
 
               <hr class='h-px my-8 bg-gray-200 border-0 dark:bg-gray-700' /> -->
-              <p class='text-xl'>
-                Random statistic here, conversion rate growth etc..
-              </p>
-              <p class='mb-3 font-medium text-md text-gray-400 mt-5 min-h-32'>
-                "The client has learned to trust Halo Lab, thanks to their
-                significant knowledge in UI/UX design. The vendor has provided
-                valuable feedback by always being readily available for
-                communication.
-              </p>
+              <div id='accordionFlushExample' class='pt-5'>
+                <div class=''>
+                  <h2 class='mb-0' id='flush-headingTwo'>
+                    <button
+                      class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                      type='button'
+                      data-te-collapse-init
+                      data-te-collapse-collapsed
+                      data-te-target='#flush-collapseTwo'
+                      aria-expanded='false'
+                      aria-controls='flush-collapseTwo'
+                    >
+                      <h1 class='title-font text-4xl font-semibold text-black'>
+                        Design
+                      </h1>
+                      <span
+                        class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                      >
+                        <Icon name='mdi:chevron-down' />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id='flush-collapseTwo'
+                    class='!visible hidden border-0'
+                    data-te-collapse-item
+                    aria-labelledby='flush-headingTwo'
+                    data-te-parent='#accordionFlushExample'
+                  >
+                    <p
+                      class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                    >
+                      Nous exigeons des critères d'excellence pour atteindre la
+                      meilleure qualité possible et parvenir à un résultat de
+                      haut de gamme.
+                    </p>
+                  </div>
+                </div>
 
-              <div class='flex mt-10 items-center'>
-                <img
-                  class='w-10 h-10 rounded-full shadow-lg mr-5'
-                  src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
-                  alt='Bonnie image'
-                />
-                <div>
-                  <h3 class='font-semibold text-lg text-gray-500'>
-                    Bonet Sander
-                  </h3>
-                  <p class='text-gray-400'>CEO at Managix</p>
+                <div class=''>
+                  <h2 class='mb-0' id='flush-headingThree'>
+                    <button
+                      class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                      type='button'
+                      data-te-collapse-init
+                      data-te-collapse-collapsed
+                      data-te-target='#flush-collapseThree'
+                      aria-expanded='false'
+                      aria-controls='flush-collapseThree'
+                    >
+                      <h1 class='title-font text-4xl font-semibold text-black'>
+                        Développement
+                      </h1>
+                      <span
+                        class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                      >
+                        <Icon name='mdi:chevron-down' />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id='flush-collapseThree'
+                    class='!visible hidden border-0'
+                    data-te-collapse-item
+                    aria-labelledby='flush-headingTwo'
+                    data-te-parent='#accordionFlushExample'
+                  >
+                    <p
+                      class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                    >
+                      Nous exigeons des critères d'excellence pour atteindre la
+                      meilleure qualité possible et parvenir à un résultat de
+                      haut de gamme.
+                    </p>
+                  </div>
+                </div>
+
+                <div class=''>
+                  <h2 class='mb-0' id='flush-headingFourth'>
+                    <button
+                      class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                      type='button'
+                      data-te-collapse-init
+                      data-te-collapse-collapsed
+                      data-te-target='#flush-collapseFourth'
+                      aria-expanded='false'
+                      aria-controls='flush-collapseFourth'
+                    >
+                      <h1 class='title-font text-4xl font-semibold text-black'>
+                        Marketing
+                      </h1>
+                      <span
+                        class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                      >
+                        <Icon name='mdi:chevron-down' />
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    id='flush-collapseFourth'
+                    class='!visible hidden border-0'
+                    data-te-collapse-item
+                    aria-labelledby='flush-headingTwo'
+                    data-te-parent='#accordionFlushExample'
+                  >
+                    <p
+                      class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                    >
+                      Nous exigeons des critères d'excellence pour atteindre la
+                      meilleure qualité possible et parvenir à un résultat de
+                      haut de gamme.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- <Slider/> -->
         </div>
       </div>
 
       <Intro />
       <!-- <Services /> -->
-      <Projet />
-      <Projet />
-      <Projet />
+      <Projects />
       <Testimonials />
       <!-- <Reviews client:load /> -->
       <Services />

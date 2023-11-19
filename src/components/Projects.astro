@@ -1,0 +1,41 @@
+---
+import Projet from "./Projet";
+
+const zemium = [
+  {
+    url: "public/projects/zemium/ar.webp",
+    alt: "list",
+  },
+  {
+    url: "https://framerusercontent.com/images/qKxjUHn7yjkF4N7AZYyyBSME8.webp",
+    alt: "list",
+  },
+];
+
+const athena = [
+  {
+    url: "https://framerusercontent.com/images/iV0D0WBbS40fnL4cieaU5hXDbo.webp",
+    alt: "athena",
+  },
+  {
+    url: "https://framerusercontent.com/images/z3nXYtdl52mdjiZ4MbZtEKELAM.webp",
+    alt: "list",
+  },
+];
+---
+
+<Projet
+  client:load
+  title='Zemium'
+  description='Designing a self-service digital estate planning platform'
+  tags={["Web Design", "UX/UI"]}
+  list={zemium}
+/>
+
+<Projet
+  client:load
+  title='Athena'
+  description='Designing a self-service digital estate planning platform'
+  tags={["Web Design", "UX/UI"]}
+  list={athena}
+/>
