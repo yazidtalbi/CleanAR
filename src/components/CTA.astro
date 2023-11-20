@@ -12,9 +12,9 @@ import { Icon } from "astro-icon";
 
 <section class='py-32'>
   <div
-    class='flex flex-wrap max-w-screen-xl mx-auto bg-gray-200 p-14 rounded-xl'
+    class='md:flex block flex-wrap max-w-screen-xl mx-auto bg-gray-200 rounded-xl'
   >
-    <div class='lg:w-7/12'>
+    <div class='lg:w-7/12 md:p-14 p-10'>
       <div class='h-full flex items-center mr-10'>
         <div class='flex-grow'>
           <div class=''>
@@ -70,7 +70,7 @@ import { Icon } from "astro-icon";
                   >A propos votre projet..</label
                 >
               </div>
-              <div class='flex justify-between'>
+              <div class='md:flex block justify-between pt-10'>
                 <p class='w-96'>
                   By sending this form I confirm that I have read and accept the
                   Privacy Policy
@@ -78,7 +78,7 @@ import { Icon } from "astro-icon";
 
                 <button
                   type='button'
-                  class='text-white text-xl bg-black focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  class='mt-10 md:mt-0 text-white text-xl bg-black focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                   >Envoyer un message</button
                 >
               </div>
@@ -88,7 +88,7 @@ import { Icon } from "astro-icon";
       </div>
     </div>
 
-    <div class='lg:w-5/12 self-center'>
+    <div class='lg:w-5/12 self-center md:p-14 p-0'>
       <img src='https://placehold.co/800x600' class='rounded-xl' />
     </div>
   </div>

@@ -16,10 +16,9 @@ body {
   justify-content: flex-start;
   max-width: 1200px;
   overflow: visible;
-  padding-top: 200px;
-  padding-bottom: 100px;
+
   position: sticky;
-  top: -48px;
+
   transform: perspective(1200px);
   width: 100%;
   will-change: transform;

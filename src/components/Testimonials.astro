@@ -1,5 +1,29 @@
 ---
 import Testimonial from "./Testimonial.astro";
+
+const testimonials = [
+  {
+    img: "https://framerusercontent.com/images/iV0D0WBbS40fnL4cieaU5hXDbo.webp",
+    name: "azdxxazda",
+    role: "xxxxxxxxxx",
+    text: "xxxxxxxxxxxxxxxxxxxxxxxx azdabbbbbbbbbbbbbbb  bbbbbbbbbbbzda",
+    alt: "avatar of zemium",
+  },
+  {
+    img: "https://framerusercontent.com/images/iV0D0WBbS40fnL4cieaU5hXDbo.webp",
+    name: "azdazda",
+    role: "xxxxxxxxxx",
+    text: "azdabbbbbbbbbbbbbbb  bbbbbbbbbbbzda",
+    alt: "avatar of zemium",
+  },
+  {
+    img: "https://framerusercontent.com/images/iV0D0WBbS40fnL4cieaU5hXDbo.webp",
+    name: "azdazda",
+    role: "xxxxxxxxxx",
+    text: "azdabbbbbbbbbbbbbbb  bbbbbbbbbbbzda",
+    alt: "avatar of zemium",
+  },
+];
 ---
 
 <style>
@@ -26,7 +50,7 @@ import Testimonial from "./Testimonial.astro";
 </style>
 
 <section class=''>
-  <div class='py-32'>
+  <div class='py-32 mx-10'>
     <div class='flex place-content-center'>
       <img
         class='max-h-28 self-center'
@@ -36,7 +60,7 @@ transform: scaleX(-1); opacity:0.1'
       />
 
       <h1
-        class='mb-4 text-5xl font-semibold tracking-loose leading-tight text-gray-900 max-w-4xl text-center self-center mx-10'
+        class='mb-4 text-4xl md:text-5xl font-semibold tracking-loose leading-tight text-gray-900 max-w-4xl text-center self-center mx-10'
       >
         Approuvé par <br />plusieurs Professionnels
       </h1>
@@ -61,73 +85,82 @@ transform: scaleX(-1); opacity:0.1'
   >
     <div class='relative bg-gradient-to-b from-[#efefef] h-40 z-20'></div>
     <div class='flex grid-cols-3 gap-10 z-10'>
-      <div class='marquee-testimonial'>
+      <div class='marquee-testimonial' id='originalContainer'>
         <div class='marquee-content'>
           <div class='space-y-10'>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
+            {
+              testimonials.map((item, index) => (
+                <div key={index} class='flex-none'>
+                  <Testimonial
+                    name={item.name}
+                    role={item.role}
+                    text={item.text}
+                    img={item.img}
+                    alt={item.alt}
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
-      <div class='marquee-testimonial'>
+      <div class='marquee-testimonial' id='originalContainer'>
         <div class='marquee-content-2'>
-          <div class='space-y-10'>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
+          <div class=''>
+            {
+              testimonials.map((item, index) => (
+                <div key={index} class='flex-none mb-10'>
+                  <Testimonial
+                    name={item.name}
+                    role={item.role}
+                    text={item.text}
+                    img={item.img}
+                    alt={item.alt}
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
-      <div class='marquee-testimonial'>
+      <div class='marquee-testimonial' id='originalContainer'>
         <div class='marquee-content'>
-          <div class='space-y-10'>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
-            <div class='flex-none'>
-              <Testimonial />
-            </div>
+          <div class=''>
+            {
+              testimonials.map((item, index) => (
+                <div key={index} class='flex-none  '>
+                  <Testimonial
+                    name={item.name}
+                    role={item.role}
+                    text={item.text}
+                    img={item.img}
+                    alt={item.alt}
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
     </div>
+    <div
+      class='relative bottom-0 bg-gradient-to-t from-[#efefef] h-40 z-20 max-w-screen-xl mx-auto px-5 -mt-40'
+    >
+    </div>
   </section>
-  <div
-    class='relative bottom-0 bg-gradient-to-t from-[#efefef] h-40 z-20 max-w-screen-xl mx-auto px-5 -mt-40'
-  >
-  </div>
 </div>
+
+<script>
+  $(document).ready(function () {
+    // Get the container element
+    const originalContainer = $("#originalContainer");
+
+    // Clone the child elements and append the clones
+    const originalChildren = originalContainer.children();
+    const cloneCount = 2; // Change this to the number of times you want to repeat the elements
+
+    for (let i = 0; i < cloneCount; i++) {
+      originalChildren.clone(true).appendTo(originalContainer);
+    }
+  });
+</script>
