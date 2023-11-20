@@ -2,7 +2,7 @@
 import Icon from "astro-icon";
 ---
 
-<div class='relative z-10 mx-20 space-x-5 hidden md:flex' id='image'>
+<div class='relative z-10 mx-20 space-x-5 hidden lg:flex' id='image'>
   <div class='py-8 px-4 w-1/3 text-left self-center space-y-12 pr-10'>
     <h1 class='text-black text-2xl font-medium leading-relaxed text-right'>
       Nous sommes une agence de Marketing Digital spécialisée dans la conception
@@ -28,7 +28,7 @@ import Icon from "astro-icon";
         />
       </div>
 
-      <p class='text-black text-xl font-semibold text-right'>
+      <p class='text-gray-400 text-xl font-semibold text-right'>
         +26 partenaires <br />nous ont fait confiance
       </p>
     </div>
@@ -182,7 +182,10 @@ import Icon from "astro-icon";
   <!-- <Slider/> -->
 </div>
 
-<div class='relative z-10 space-x-5 block md:hidden bg-[#efefef]' id='image'>
+<div
+  class='relative z-10 space-x-5 block lg:hidden bg-[#efefef] max-w-xl mx-auto'
+  id='image'
+>
   <div class='text-left'>
     <img
       class='h-auto rounded-3xl'
@@ -197,7 +200,7 @@ import Icon from "astro-icon";
       des identitées de marque et la création des sites Web.
     </h1>
 
-    <div id='partenaires' class='flex space-x-8'>
+    <div id='partenaires' class='block md:flex'>
       <div class='flex -space-x-4 rtl:space-x-reverse mb-4 justify-start'>
         <img
           class='w-14 h-14 border-4 border-white rounded-full dark:border-gray-800'
@@ -216,15 +219,14 @@ import Icon from "astro-icon";
         />
       </div>
 
-      <p class='text-black text-xl font-semibold'>
+      <p class='text-gray-400 text-xl font-semibold'>
         +26 partenaires <br />nous ont fait confiance
       </p>
     </div>
-  </div>
 
-  <div class='text-left'>
-    <div class=''>
-      <!-- <div class='flex opacity-40 space-x-8 mb-10'>
+    <div class='text-left'>
+      <div class=''>
+        <!-- <div class='flex opacity-40 space-x-8 mb-10'>
                 <img
                   class='w-32'
                   src='https://framerusercontent.com/images/fdhVqx8VvsaM1Dy11xfC8cIgZM.png?scale-down-to=512'
@@ -241,118 +243,125 @@ import Icon from "astro-icon";
               </div>
 
               <hr class='h-px my-8 bg-gray-200 border-0 dark:bg-gray-700' /> -->
-      <div id='accordionServices' class=''>
-        <div class=''>
-          <h2 class='mb-0' id='flush-headingTwo'>
-            <button
-              class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
-              type='button'
-              data-te-collapse-init
-              data-te-collapse-collapsed
-              data-te-target='#flush-collapseTwo'
-              aria-expanded='false'
-              aria-controls='flush-collapseTwo'
-            >
-              <h1 class='title-font text-4xl font-semibold text-black'>
-                Design
-              </h1>
-              <span
-                class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+        <div id='accordionServices' class=''>
+          <div class=''>
+            <h2 class='mb-0' id='flush-headingTwo'>
+              <button
+                class='group relative flex w-full items-center rounded-none border-0 py-2 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                type='button'
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target='#flush-collapseTwo'
+                aria-expanded='false'
+                aria-controls='flush-collapseTwo'
               >
-                <Icon name='mdi:chevron-down' />
-              </span>
-            </button>
-          </h2>
-          <div
-            id='flush-collapseTwo'
-            class='!visible hidden border-0'
-            data-te-collapse-item
-            aria-labelledby='flush-headingTwo'
-            data-te-parent='#accordionServices'
-          >
-            <p
-              class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                <h1
+                  class='title-font text-2xl md:text-4xl font-semibold text-black'
+                >
+                  Design
+                </h1>
+                <span
+                  class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                >
+                  <Icon name='mdi:chevron-down' />
+                </span>
+              </button>
+            </h2>
+            <div
+              id='flush-collapseTwo'
+              class='!visible hidden border-0'
+              data-te-collapse-item
+              aria-labelledby='flush-headingTwo'
+              data-te-parent='#accordionServices'
             >
-              Nous exigeons des critères d'excellence pour atteindre la
-              meilleure qualité possible et parvenir à un résultat de haut de
-              gamme.
-            </p>
+              <p
+                class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+              >
+                Nous exigeons des critères d'excellence pour atteindre la
+                meilleure qualité possible et parvenir à un résultat de haut de
+                gamme.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class=''>
-          <h2 class='mb-0' id='flush-headingThree'>
-            <button
-              class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
-              type='button'
-              data-te-collapse-init
-              data-te-collapse-collapsed
-              data-te-target='#flush-collapseThree'
-              aria-expanded='false'
-              aria-controls='flush-collapseThree'
-            >
-              <h1 class='title-font text-4xl font-semibold text-black'>
-                Développement
-              </h1>
-              <span
-                class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+          <div class=''>
+            <h2 class='mb-0' id='flush-headingThree'>
+              <button
+                class='group relative flex w-full items-center rounded-none border-0 py-2 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                type='button'
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target='#flush-collapseThree'
+                aria-expanded='false'
+                aria-controls='flush-collapseThree'
               >
-                <Icon name='mdi:chevron-down' />
-              </span>
-            </button>
-          </h2>
-          <div
-            id='flush-collapseThree'
-            class='!visible hidden border-0'
-            data-te-collapse-item
-            aria-labelledby='flush-headingTwo'
-            data-te-parent='#accordionServices'
-          >
-            <p
-              class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                <h1
+                  class='title-font text-2xl md:text-4xl font-semibold text-black'
+                >
+                  Développement
+                </h1>
+                <span
+                  class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                >
+                  <Icon name='mdi:chevron-down' />
+                </span>
+              </button>
+            </h2>
+            <div
+              id='flush-collapseThree'
+              class='!visible hidden border-0'
+              data-te-collapse-item
+              aria-labelledby='flush-headingTwo'
+              data-te-parent='#accordionServices'
             >
-              Nous exigeons des critères d'excellence pour atteindre la
-              meilleure qualité possible et parvenir à un résultat de haut de
-              gamme.
-            </p>
+              <p
+                class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+              >
+                Nous exigeons des critères d'excellence pour atteindre la
+                meilleure qualité possible et parvenir à un résultat de haut de
+                gamme.
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class=''>
-          <h2 class='mb-0' id='flush-headingFourth'>
-            <button
-              class='group relative flex w-full items-center rounded-none border-0 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
-              type='button'
-              data-te-collapse-init
-              data-te-collapse-collapsed
-              data-te-target='#flush-collapseFourth'
-              aria-expanded='false'
-              aria-controls='flush-collapseFourth'
-            >
-              <h1 class='title-font text-4xl font-semibold text-black'>
-                Marketing
-              </h1>
-              <span
-                class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+          <div class=''>
+            <h2 class='mb-0' id='flush-headingFourth'>
+              <button
+                class='group relative flex w-full items-center rounded-none border-0 py-2 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[ hadow:inset_0_-1px_0_rgba(75,85,99)]'
+                type='button'
+                data-te-collapse-init
+                data-te-collapse-collapsed
+                data-te-target='#flush-collapseFourth'
+                aria-expanded='false'
+                aria-controls='flush-collapseFourth'
               >
-                <Icon name='mdi:chevron-down' />
-              </span>
-            </button>
-          </h2>
-          <div
-            id='flush-collapseFourth'
-            class='!visible hidden border-0'
-            data-te-collapse-item
-            aria-labelledby='flush-headingTwo'
-            data-te-parent='#accordionServices'
-          >
-            <p
-              class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+                <h1
+                  class='title-font text-2xl md:text-4xl font-semibold text-black'
+                >
+                  Marketing
+                </h1>
+                <span
+                  class='-mr-1 ml-5 h-10 w-10 shrink-0 rotate-[-180deg] fill-[#fefefe] transition-transform duration-200 ease-in-out group-[[data-te-collapse-collapsed]]:mr-0 group-[[data-te-collapse-collapsed]]:rotate-0 group-[[data-te-collapse-collapsed]]:fill-[#212529] motion-reduce:transition-none dark:fill-blue-300 dark:group-[[data-te-collapse-collapsed]]:fill-white'
+                >
+                  <Icon name='mdi:chevron-down' />
+                </span>
+              </button>
+            </h2>
+            <div
+              id='flush-collapseFourth'
+              class='!visible hidden border-0'
+              data-te-collapse-item
+              aria-labelledby='flush-headingTwo'
+              data-te-parent='#accordionServices'
             >
-              Nous exigeons des critères d'excellence pour atteindre la
-              meilleure qualité possible et parvenir à un résultat de haut de
-              gamme.
-            </p>
+              <p
+                class='mb-5 font-normal text-gray-500 text-xl leading-relaxed py-4'
+              >
+                Nous exigeons des critères d'excellence pour atteindre la
+                meilleure qualité possible et parvenir à un résultat de haut de
+                gamme.
+              </p>
+            </div>
           </div>
         </div>
       </div>

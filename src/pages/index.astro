@@ -16,6 +16,7 @@ import Reviews from "../components/Reviews";
 
 import Projects from "../components/Projects.astro";
 import Hero from "../components/Hero.astro";
+import Test from "../components/Test";
 ---
 
 <!doctype html>
@@ -24,7 +25,7 @@ import Hero from "../components/Hero.astro";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <!-- Alpine Plugins -->
   </head>
-  <body class=''>
+  <body class='max-w-full overflow-x-hidden'>
     <HeaderFlow title={SITE_TITLE} />
     <section class=''>
       <div class='px-4 mx-auto max-w-screen-2xl'>
@@ -53,9 +54,9 @@ import Hero from "../components/Hero.astro";
           >
             <a
               href='#'
-              class='inline-flex justify-center items-center my-5 py-3 px-7 text-xl font-semibold text-center text-white rounded-full w-full bg-black'
+              class='inline-flex justify-center items-center my-5 py-3 px-7 text-lg font-semibold text-center text-white rounded-full w-full bg-black'
             >
-              Réservez une Consultation Gratuite
+              Consultation Gratuite
               <svg
                 class='ml-2 -mr-1 w-5 h-5'
                 fill='currentColor'
@@ -75,9 +76,11 @@ import Hero from "../components/Hero.astro";
       <Intro />
       <!-- <Services /> -->
       <Projects />
-      <!-- <Testimonials /> -->
+
+      <Testimonials />
       <!-- <Reviews client:load /> -->
       <Services />
+
       <FAQ />
       <CTA />
       <Footer />

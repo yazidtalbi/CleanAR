@@ -44,13 +44,6 @@ const faq = [
 ---
 
 <div class='py-24'>
-  <div class='flex place-content-center'>
-    <h1
-      class='mb-4 text-4xl md:text-5xl font-semibold tracking-loose leading-tight text-gray-900 max-w-4xl text-center self-center mx-10'
-    >
-      Questions Fréquemment Posées
-    </h1>
-  </div>
   <!-- <p
     class='font-normal w-1/2 text-center self-center text-md leading-relaxed mx-auto mt-5'
   >
@@ -58,41 +51,15 @@ const faq = [
   </p> -->
 </div>
 
-<div class='flex flex-wrap container mx-auto max-w-screen-2xl px-6'>
-  <div class='lg:w-1/3 order-last md:order-first max-h-full flex items-start'>
-    <div class='flex-grow h-full'>
-      <div
-        class='w-full md:w-96 p-12 border border-gray-200 animate-fade-in rounded-3xl bg-white shadow-md shadow-gray-900/5 mt-10 md:mt-0 sticky top-40'
-        id='wasup'
-      >
-        <div class='flex md:block space-x-4'>
-          <img
-            class='w-20 h-20 rounded-full shadow-lg mr-5 my-auto md:my-0'
-            src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
-            alt='Bonnie image'
-          />
-
-          <p
-            class='md:py-4 -0 font-medium text-xl text-gray-700 md:mt-5 min-h-32 leading-relaxed'
-          >
-            Voici Julia, Head Manager chez Arlibera. N'hésitez pas à lui envoyer
-            un message pour plus de réponses.
-          </p>
-        </div>
-
-        <a
-          href='#'
-          class='inline-flex justify-center items-center mt-10 md:mt-5 py-5 md:py-3 px-5 text-xl font-semibold text-center text-white rounded-full bg-gray-900 w-full'
-        >
-          Poser une Question
-          <img src='public/whatsapp.svg' class='h-6 w-6 ml-5' />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class='px-0 md:px-4 lg:w-2/3 -mt-5'>
+<div class='block md:flex md:flex-wrap container mx-auto max-w-screen-2xl px-6'>
+  <div class='px-0 md:px-4 lg:w-2/3 -mt-5 order-1 md:order-last'>
     <div class='h-full flex items-start'>
       <div class='flex-grow'>
+        <h1
+          class='font-semibold text-left text-4xl md:text-9xl leading-tight max-w-2xl pb-12 mt-2'
+        >
+          FAQ
+        </h1>
         <div id='accordionFAQ'>
           {
             faq.map((item, index) => (
@@ -102,7 +69,7 @@ const faq = [
               >
                 <h2 class='mb-0' id='flush-headingTwo'>
                   <button
-                    class='group relative flex w-full items-center rounded-none border-0 border-b-0 px-0 md:px-5 py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
+                    class='group relative flex w-full items-center rounded-none border-0 border-b-0 px-0   py-4 text-left text-base text-neutral-800 transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-neutral-800 dark:text-white [&:not([data-te-collapse-collapsed])]: [&:not([data-te-collapse-collapsed])]:text-black [&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(229,231,235)] dark:[&:not([data-te-collapse-collapsed])]:bg-neutral-800 dark:[&:not([data-te-collapse-collapsed])]:text-black-400 dark:[&:not([data-te-collapse-collapsed])]:[box-shadow:inset_0_-1px_0_rgba(75,85,99)]'
                     type='button'
                     data-te-collapse-init
                     data-te-collapse-collapsed
@@ -125,7 +92,7 @@ const faq = [
                   aria-labelledby='flush-headingTwo'
                   data-te-parent='#accordionFAQ'
                 >
-                  <p class='mb-5 font-normal text-gray-500 text-xl leading-relaxed px-0 md:px-5 py-4 whitespace-pre-line'>
+                  <p class='mb-5 font-normal text-gray-500 text-xl leading-relaxed px-0   py-4 whitespace-pre-line'>
                     {item.answer}
                   </p>
                 </div>
@@ -133,6 +100,38 @@ const faq = [
             ))
           }
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='lg:w-1/3 order-2 md:order-first max-h-full flex items-start'>
+    <div class='flex-grow h-full'>
+      <div
+        class='w-full md:w-96 p-8 md:p-12 border border-gray-200 animate-fade-in rounded-3xl bg-white shadow-md shadow-gray-900/5 mt-10 md:mt-0 sticky top-40'
+        id='wasup'
+      >
+        <div class='md:block'>
+          <img
+            class='w-16 h-16 md:w-20 md:h-20 rounded-full mb-5 mr-5 my-auto md:my-0'
+            src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
+            alt='Bonnie image'
+          />
+
+          <p
+            class='md:py-4 -0 font-medium text-xl text-gray-700 md:mt-5 min-h-32 leading-relaxed'
+          >
+            Voici Julia, Head Manager chez Arlibera. N'hésitez pas à lui envoyer
+            un message pour plus de réponses.
+          </p>
+        </div>
+
+        <a
+          href='#'
+          class='inline-flex justify-center items-center mt-10 md:mt-5 py-5 md:py-3 px-5 text-lg md:text-xl font-semibold text-center text-white rounded-full bg-gray-900 w-full'
+        >
+          Poser une Question
+          <img src='public/whatsapp.svg' class='h-6 w-6 ml-5' />
+        </a>
       </div>
     </div>
   </div>
