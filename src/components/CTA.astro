@@ -14,12 +14,12 @@ import { Icon } from "astro-icon";
   <div
     class='md:flex block flex-wrap max-w-screen-xl mx-auto bg-gray-200 rounded-xl'
   >
-    <div class='lg:w-7/12 md:p-14 p-10'>
-      <div class='h-full flex items-center mr-10'>
+    <div class='w-full lg:w-7/12 md:p-14 p-10'>
+      <div class='h-full block md:flex items-center mr-0 md:mr-10'>
         <div class='flex-grow'>
           <div class=''>
             <h1
-              class='font-semibold text-left text-5xl leading-tight max-w-2xl pb-10'
+              class='font-semibold text-left text-4xl md:text-5xl leading-tight max-w-2xl pb-10'
             >
               Prêt à discuter votre projet avec nous ?
             </h1>
@@ -30,13 +30,13 @@ import { Icon } from "astro-icon";
                     type='text'
                     name='floating_first_name'
                     id='floating_first_name'
-                    class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer'
+                    class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer'
                     placeholder=' '
                     required
                   />
                   <label
                     for='floating_first_name'
-                    class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
+                    class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
                     >Nom Complet *</label
                   >
                 </div>
@@ -45,13 +45,13 @@ import { Icon } from "astro-icon";
                     type='text'
                     name='floating_last_name'
                     id='floating_last_name'
-                    class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer'
+                    class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer'
                     placeholder=' '
                     required
                   />
                   <label
                     for='floating_last_name'
-                    class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
+                    class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
                     >Email *</label
                   >
                 </div>
@@ -61,24 +61,24 @@ import { Icon } from "astro-icon";
                 <textarea
                   name='floating_email'
                   id='floating_email'
-                  class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer'
+                  class='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer'
                   placeholder=' '
                   required></textarea>
                 <label
                   for='floating_email'
-                  class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
+                  class='peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-gray-600 peer-focus:dark:text-gray-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6'
                   >A propos votre projet..</label
                 >
               </div>
               <div class='md:flex block justify-between pt-10'>
-                <p class='w-96'>
+                <p class='md:w-96'>
                   By sending this form I confirm that I have read and accept the
                   Privacy Policy
                 </p>
 
                 <button
                   type='button'
-                  class='mt-10 md:mt-0 text-white text-xl bg-black focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+                  class='mt-10 md:mt-0 text-white text-xl bg-black focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-full px-4 py-2 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
                   >Envoyer un message</button
                 >
               </div>
