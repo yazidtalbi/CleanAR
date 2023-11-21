@@ -7,7 +7,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Slider from "../components/Slider.astro";
 import Intro from "../components/Intro.astro";
 import Services from "../components/Services.astro";
-import Projet from "../components/Projet.jsx";
+
 import Testimonials from "../components/Testimonials.astro";
 import Avantages from "../components/Avantages.astro";
 import FAQ from "../components/FAQ.astro";
@@ -80,7 +80,6 @@ import Test from "../components/Test";
       <Testimonials />
       <!-- <Reviews client:load /> -->
       <Services />
-
       <FAQ />
       <CTA />
       <Footer />
@@ -91,14 +90,14 @@ import Test from "../components/Test";
       <script
         src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
       ></script>
-
+      <!-- 
       <script>
         $(document).ready(function () {
           $(window).scroll(function () {
             $(".sticky-hero").css("opacity", 1 - $(this).scrollTop() / 700);
           });
         });
-      </script>
+      </script> -->
     </section>
   </body>
 </html>

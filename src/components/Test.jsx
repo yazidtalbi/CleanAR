@@ -39,11 +39,14 @@ export default function Test() {
     <div>
       <Marquee autoFill className='flex-container overflow-visible'>
         {testimonials.map((item, index) => (
-          <div class='max-w-sm p-8 border border-gray-200 animate-fade-in rounded-3xl bg-white shadow-md shadow-gray-900/5  mx-4 flex flex-col min-h-[500px]'>
-            <div class='flex-grow'>
-              <div href='#' class='mb-20 lg:mb-0 opacity-25'>
+          <div
+            key={index}
+            className='max-w-sm p-8 border border-gray-200 animate-fade-in rounded-3xl bg-white shadow-md shadow-gray-900/5  mx-4 flex flex-col min-h-[500px]'
+          >
+            <div className='flex-grow'>
+              <div href='#' className='mb-20 lg:mb-0 opacity-25'>
                 <svg
-                  class='h-11'
+                  className='h-11'
                   viewBox='0 0 120 41'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
@@ -66,19 +69,19 @@ export default function Test() {
                   ></path>
                 </svg>
               </div>
-              <p class='relative font-medium text-lg text-gray-700 mt-8'>
+              <p className='relative font-medium text-lg text-gray-700 mt-8'>
                 {item.text}
               </p>
             </div>
-            <div class='flex items-end mt-10'>
+            <div className='flex items-end mt-10'>
               <img
-                class='w-12 h-12 rounded-full shadow-lg mr-5'
+                className='w-12 h-12 rounded-full shadow-lg mr-5'
                 src='https://flowbite.com/docs/images/people/profile-picture-3.jpg'
                 alt='Avatar'
               />
               <div>
-                <h3 class='font-bold text-lg'>azdazda</h3>
-                <p class='text-gray-400'>xxxxxxxxxx</p>
+                <h3 className='font-bold text-lg'>azdazda</h3>
+                <p className='text-gray-400'>xxxxxxxxxx</p>
               </div>
             </div>
           </div>
