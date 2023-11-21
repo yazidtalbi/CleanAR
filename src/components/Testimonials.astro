@@ -1,5 +1,5 @@
 ---
-import Testimonial from "./Testimonial.astro";
+import Test from "./Test.jsx";
 
 const testimonials = [
   {
@@ -49,86 +49,53 @@ const testimonials = [
   }
 </style>
 
-<section class=''>
-  <div class='py-32 mx-10'>
+<div class='py-12 md:py-24'></div>
+<section class='pb-14 md:pb-20'>
+  <div class='px-10'>
     <div class='flex place-content-center'>
       <img
-        class='max-h-28 self-center'
+        class='md:h-24 h-16 self-center'
         style='    --transform-scale-x: -1;-webkit-transform: scaleX(-1);
 transform: scaleX(-1); opacity:0.1'
         src='https://framerusercontent.com/images/iRhDo8XBod5PzPuhCHZbXQG9VeU.svg'
       />
 
       <h1
-        class='mb-4 text-4xl md:text-5xl font-semibold tracking-loose leading-tight text-gray-900 max-w-4xl text-center self-center mx-10'
+        class='text-3xl md:text-6xl font-semibold tracking-loose leading-tight text-gray-900 max-w-4xl text-center self-center mx-5 md:mx-10'
       >
-        Approuvé par <br />plusieurs Professionnels
+        Approuvé par <br class='hidden md:block' />plusieurs Professionnels
       </h1>
 
       <img
         style='opacity:0.1'
-        class='max-h-28 self-center'
+        class='md:h-24 h-16 self-center'
         src='https://framerusercontent.com/images/iRhDo8XBod5PzPuhCHZbXQG9VeU.svg'
       />
     </div>
     <p
-      class='font-normal w-96 text-center self-center text-lg leading-relaxed mx-auto mt-5'
+      class='font-normal text-center self-center text-lg leading-relaxed mx-auto mt-5'
     >
-      La satisfaction du client est notre priorité absolue. Nous sommes
-      reconnaissants pour tous les partenaires qui nous ont fait confiance.
+      La satisfaction de nos clients est notre priorité absolue
+      <!--  Nous sommes
+      reconnaissants pour tous les partenaires qui nous ont fait confiance. -->
     </p>
   </div>
 </section>
-<div class='max-w-screen-xl mx-auto'>
-  <div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
-    <div class='grid gap-4'>
-      {
-        testimonials.map((item, index) => (
-          <div key={index} class='flex-none'>
-            <Testimonial
-              name={item.name}
-              role={item.role}
-              text={item.text}
-              img={item.img}
-              alt={item.alt}
-            />
-          </div>
-        ))
-      }
-    </div>
-    <div class='grid gap-4'>
-      {
-        testimonials.map((item, index) => (
-          <div key={index} class='flex-none'>
-            <Testimonial
-              name={item.name}
-              role={item.role}
-              text={item.text}
-              img={item.img}
-              alt={item.alt}
-            />
-          </div>
-        ))
-      }
-    </div>
-    <div class='grid gap-4'>
-      {
-        testimonials.map((item, index) => (
-          <div key={index} class='flex-none'>
-            <Testimonial
-              name={item.name}
-              role={item.role}
-              text={item.text}
-              img={item.img}
-              alt={item.alt}
-            />
-          </div>
-        ))
-      }
-    </div>
-  </div>
 
-  <section class='pb-24 overflow-hidden max-w-screen-xl mx-auto px-5'>
-    <div class='flex space-x-10'></div>
-  </section>
+<div class=''><Test client:load /></div>
+
+<div class='max-w-screen-xl mx-auto'>
+  <!-- {
+    testimonials.map((item, index) => (
+      <div key={index} class='flex-none'>
+        <Testimonial
+          name={item.name}
+          role={item.role}
+          text={item.text}
+          img={item.img}
+          alt={item.alt}
+        />
+      </div>
+    ))
+  } -->
 </div>
