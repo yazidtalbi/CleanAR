@@ -2,6 +2,7 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 import Testimonial from "./Testimonial.jsx";
+import Ticker from "framer-motion-ticker";
 
 const testimonials = [
   {
@@ -37,7 +38,7 @@ const testimonials = [
 export default function Test() {
   return (
     <div>
-      <Marquee autoFill className='flex-container overflow-visible'>
+      <Ticker duration={20}>
         {testimonials.map((item, index) => (
           <div
             key={index}
@@ -86,7 +87,7 @@ export default function Test() {
             </div>
           </div>
         ))}
-      </Marquee>
+      </Ticker>
     </div>
   );
 }
